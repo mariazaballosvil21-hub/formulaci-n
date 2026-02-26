@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Química Pro - Formulación</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>🧪 Academia de Formulación Química</h1>
+        <nav>
+            <button onclick="mostrarSeccion('organica')">Orgánica</button>
+            <button onclick="mostrarSeccion('inorganica')">Inorgánica</button>
+            <button onclick="mostrarSeccion('practica')">Panel de Ejercicios</button>
+        </nav>
+        <div id="marcador">
+    <span>Aciertos: <strong id="puntos-aciertos">0</strong></span> | 
+    <span>Intentos: <strong id="puntos-intentos">0</strong></span> |
+    <span>Efectividad: <strong id="porcentaje">0%</strong></span>
+</div>
+    </header>
+
+    <main id="contenido">
+        <section id="organica" class="seccion">
+    <h2>Formulación Orgánica</h2>
+    
+    <div class="teoria-box">
+        <h3>1. Hidrocarburos y Derivados</h3>
+        <ul>
+            <li><strong>Alcanos, Alquenos y Alquinos:</strong> Se prioriza el enlace múltiple para numerar[cite: 76].</li>
+            <li><strong>Alicíclicos:</strong> Se usa el prefijo <em>ciclo-</em> (ej. Ciclohexeno)[cite: 91, 98].</li>
+            <li><strong>Aromáticos:</strong> Derivados del benceno. Se usan prefijos <em>orto- (1,2)</em>, <em>meta- (1,3)</em> y <em>para- (1,4)</em>[cite: 107, 109].</li>
+            <li><strong>Halogenados:</strong> El halógeno (F, Cl, Br, I) se nombra como sustituyente[cite: 122].</li>
+        </ul>
+    </div>
+
+    <div class="teoria-box" style="background-color: #fef9e7; border-left-color: #f1c40f;">
+        <h3>2. Orden de Prioridad (Grupos Funcionales)</h3>
+        <p>Si hay más de una función, la de mayor prioridad es el sufijo. Las demás son prefijos[cite: 205, 206].</p>
+        <table style="width:100%; border-collapse: collapse; text-align: left;">
+            <tr style="background-color: #d5dbdb;">
+                <th>Función</th>
+                <th>Sufijo (Principal)</th>
+                <th>Prefijo (Sustituyente)</th>
+            </tr>
+            <tr><td>Ácidos</td><td>-oico</td><td>Carboxi-</td></tr>
+            <tr><td>Aldehídos</td><td>-al</td><td>Formil-</td></tr>
+            <tr><td>Cetonas</td><td>-ona</td><td>Oxo-</td></tr>
+            <tr><td>Alcoholes</td><td>-ol</td><td>Hidroxi-</td></tr>
+            <tr><td>Aminas</td><td>-amina</td><td>Amino-</td></tr>
+        </table>
+        <small><em>*Orden de mayor (arriba) a menor prioridad.</em></small>
+        </div>
+    </section>
+
+        <section id="inorganica" class="seccion" style="display:none;">
+    <h2>Formulación Inorgánica</h2>
+    
+    <div class="teoria-box">
+        <h3>1. Combinaciones Binarias</h3>
+        <ul>
+            <li><strong>Hidruros Metálicos:</strong> Metal + Hidrógeno (valencia 1). Se nombran como "hidruro de..."[cite: 341, 343, 345].</li>
+            <li><strong>Óxidos:</strong> Elemento + Oxígeno (valencia 2). Se nombran como "óxido de..."[cite: 367, 370].</li>
+            <li><strong>Sales Binarias:</strong> Metal + No Metal. Terminación <em>-uro</em> para el no metal[cite: 381, 383].</li>
+        </ul>
+    </div>
+
+    <div class="teoria-box" style="background-color: #f4ecf7; border-left-color: #8e44ad;">
+        <h3>2. Ácidos Oxoácidos y Oxisales</h3>
+        <p>Uso de la nomenclatura tradicional basada en valencias[cite: 390]:</p>
+        <table style="width:100%; border-collapse: collapse; text-align: center;">
+            <tr style="background-color: #d7bde2;">
+                <th>Nº Valencias</th>
+                <th>Prefijo / Sufijo</th>
+            </tr>
+            <tr><td>1</td><td>-ico</td></tr>
+            <tr><td>2</td><td>-oso / -ico</td></tr>
+            <tr><td>3</td><td>hipo...oso / -oso / -ico</td></tr>
+            <tr><td>4</td><td>hipo...oso / -oso / -ico / per...ico</td></tr>
+        </table>
+        <p><small><em>Regla para sales: -oso cambia a <strong>-ito</strong> y -ico cambia a <strong>-ato</strong>[cite: 428, 429].</em></small></p>
+        </div>
+    </section>
+
+        <section id="practica" class="seccion" style="display:none;">
+            <h2>Practica lo aprendido</h2>
+            <div id="ejercicio-container">
+                <p id="enunciado">Cargando ejercicio...</p>
+                <input type="text" id="respuesta-usuario" placeholder="Escribe el nombre o fórmula">
+                <button onclick="verificarRespuesta()">Comprobar</button>
+                <p id="resultado"></p>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
