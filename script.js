@@ -41,9 +41,15 @@ const bancoEjercicios = [
 
 // --- FUNCIONES DE NAVEGACIÓN ---
 function mostrarSeccion(idSeccion) {
+    const target = document.getElementById(idSeccion);
+    if (!target) return;
+
     const secciones = document.querySelectorAll('.seccion');
-    secciones.forEach(s => s.style.display = 'none');
-    document.getElementById(idSeccion).style.display = 'block';
+    // Usamos bucle simple para compatibilidad con navegadores antiguos
+    for (let i = 0; i < secciones.length; i++) {
+        secciones[i].style.display = 'none';
+    }
+    target.style.display = 'block';
 }
 
 // --- UTILIDADES ---
@@ -52,6 +58,8 @@ function formatearFormula(texto) {
 }
 
 function generarIndiceAleatorio() {
+    if (bancoEjercicios.length <= 1) return 0;
+
     let nuevoIndice;
     do {
         nuevoIndice = Math.floor(Math.random() * bancoEjercicios.length);
