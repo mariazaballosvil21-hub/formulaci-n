@@ -1,0 +1,139 @@
+/* Configuraciones Generales */
+:root {
+    --primary-color: #2c3e50; /* Azul oscuro profesional */
+    --secondary-color: #3498db; /* Azul brillante para botones */
+    --accent-color: #27ae60; /* Verde para aciertos y química */
+    --bg-color: #f4f7f6;
+    --text-color: #333;
+    --white: #ffffff;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    margin: 0;
+    line-height: 1.6;
+}
+
+/* Encabezado y Navegación */
+header {
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 2rem 1rem;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+nav {
+    margin-top: 1.5rem;
+}
+
+nav button {
+    background-color: var(--secondary-color);
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    margin: 0 0.5rem;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+nav button:hover {
+    background-color: #2980b9;
+    transform: translateY(-2px);
+}
+
+/* Contenedor Principal */
+main {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 1rem;
+}
+
+.seccion {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+    animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Cajas de Teoría y Ejercicios */
+.teoria-box {
+    border-left: 5px solid var(--secondary-color);
+    background-color: #ebf5fb;
+    padding: 1rem 1.5rem;
+    margin-top: 1rem;
+    border-radius: 0 8px 8px 0;
+}
+
+h2 {
+    color: var(--primary-color);
+    border-bottom: 2px solid #eee;
+    padding-bottom: 0.5rem;
+}
+
+#ejercicio-container {
+    text-align: center;
+    padding: 2rem;
+    border: 2px dashed var(--secondary-color);
+    border-radius: 15px;
+}
+
+input[type="text"] {
+    width: 80%;
+    padding: 0.8rem;
+    font-size: 1.1rem;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    outline: none;
+}
+
+input[type="text"]:focus {
+    border-color: var(--secondary-color);
+}
+
+#resultado {
+    font-weight: bold;
+    margin-top: 1rem;
+    font-size: 1.2rem;
+}
+
+/* Responsividad para móviles */
+@media (max-width: 600px) {
+    nav button {
+        display: block;
+        width: 100%;
+        margin: 0.5rem 0;
+    }
+}
+#marcador {
+    background-color: var(--white);
+    max-width: 900px;
+    margin: 1rem auto;
+    padding: 10px 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    font-size: 1.1rem;
+    border-bottom: 3px solid var(--secondary-color);
+}
+
+#puntos-aciertos { color: var(--accent-color); }
+#puntos-intentos { color: var(--primary-color); }
+#porcentaje { color: #f39c12; }
